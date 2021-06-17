@@ -1,0 +1,70 @@
+@media (max-width: 575.98px) {
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        &__logo-wrap {
+            width: 100%;
+        }
+        &__links {
+            width: 100%;
+            margin-top: 2rem;
+        }
+        &__links-soc {
+            width: 100%;
+            margin-top: 2rem;
+        }
+    }
+    .header {
+        &__title {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .main {
+        &__trade {
+            &-left {
+                display: none;
+            }
+            &-right {
+                margin-left: 8%;
+                top: 0;
+            }
+        }
+        &__commerce {
+            &-left {
+                display: none;
+            }
+            &-right {
+                position: static;
+                margin: 6% 0 0 2%;
+            }
+        }
+    }
+    .form {
+        width: 100%;
+        padding: 3rem
+    }
+    .footer {
+        padding: 125px 0;
+        &__nav {
+            display: flex;
+            flex-wrap: wrap;
+            & a {
+                justify-content: center;
+                display: flex;
+            }
+        }
+        .nav__links-soc {
+            width: 100%;
+            margin-top: 4rem;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+@media (min-width: 1200px) {}

@@ -1,23 +1,11 @@
+// IMPORT STYLE FOR SLICK SLIDER
 @import '../slick/slick';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap');
-@font-face {
-    font-family: 'Gotham';
-    src: url('../../fonts/gotham/gotham-medium-webfont.woff2');
-    src: local('gotham'), url('../../fonts/gotham/gotham-medium-webfont.woff') format('woff'), url('../../fonts/gotham/gotham-medium-regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'gothambold1';
-    src: url('../../fonts/gothambold/gothambold1.eot');
-    src: local('gothambold1'), url('../../fonts/gothambold/gothambold1.woff') format('woff'), url('../../fonts/gothambold/gothambold1.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'GothamBook';
-    src: url('../../fonts/GothamBook/GothamBook.eot');
-    src: local('GothamBook'), url('../../fonts/GothamBook/GothamBook.woff') format('woff'), url('../../fonts/GothamBook/GothamBook.ttf') format('truetype');
-}
-
+// IMPORT VARIABLES
+@import '../variables/variables.scss';
+// IMPORT MIXINS
+@import '../mixins/mixins.scss';
+// IMPORT FONTS
+@import '../fonts/fonts.scss';
 * {
     margin: 0;
     padding: 0;
@@ -32,23 +20,7 @@ html {
     user-select: initial;
 }
 
-@mixin tr {
-    transition: all .3s ease-in;
-}
-
-@mixin my_pos ($top: 50%,
-$left: 50%,
-$tx: -50%,
-$ty: -50%) {
-    position: absolute;
-    top: $top;
-    left: $left;
-    transform: translate($tx, $ty);
-}
-
-$text-color: #2c4058;
-$text-light-color: #4b5562;
-$link-color: #55b7ff;
+// STYLE FOR 1 BLOCK - HEADER
 header {
     min-height: 100%;
     height: 760px;
@@ -190,10 +162,7 @@ header {
     border: 1px solid #fff;
     color: #fff;
     text-decoration: none;
-    @include my_pos(90%,
-    50%,
-    -50%,
-    -50%);
+    @include my_pos(90%, 50%, -50%, -50%);
     z-index: 1;
     display: inline-flex;
     align-items: center;
@@ -344,6 +313,7 @@ header {
     }
 }
 
+// STYLE FOR 2 BLOCK - MAIN
 .main {
     width: 100%;
     background-color: #ffffff;
@@ -531,6 +501,13 @@ header {
     display: inline-block;
 }
 
+.container {
+    width: 1170px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+// STYLE FOR 3 BLOCK - NEWS
 .news {
     background: linear-gradient(45deg, rgba(60, 27, 212, .9), rgba(36, 204, 250, .9));
     background-position: bottom;
@@ -538,11 +515,6 @@ header {
     background-size: cover;
     padding: 90px 0 150px 0;
     position: relative;
-    .container {
-        width: 1170px;
-        max-width: 95%;
-        margin: 0 auto;
-    }
     &__main {
         font-family: 'gothambold1';
         display: inline-block;
@@ -614,3 +586,227 @@ header {
         font-size: 1.4rem;
     }
 }
+
+// STYLE FOR 4 BLOCK - GALLERY
+.gallery {
+    padding: 90px 0;
+    background-color: #fff;
+    text-align: center;
+    &__btn {
+        margin-top: 55px;
+        font-family: 'GothamBook';
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $text-color;
+        border: 1px solid $text-color;
+        width: 190px;
+        padding: 15px 5px 15px 5px;
+        display: inline-block;
+        text-align: center;
+        font-size: 1.4rem;
+        @include tr();
+        &:hover,
+        &:active,
+        &:focus {
+            transform: scale(1.1);
+            transition: .4s;
+        }
+    }
+    &__main {
+        height: 440px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+    &__iframe {
+        width: 100%;
+        height: 100%;
+    }
+    &__pic1 {
+        grid-area: 1 / 1 / 3 / 3;
+        overflow: hidden;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            width: 85px;
+            height: 85px;
+            @include my_pos();
+            background: url(../../img/gallery/360.png) no-repeat center;
+        }
+    }
+    &__pic2 {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+    &__pic3 {
+        grid-area: 1 / 4 / 2 / 5;
+    }
+    &__pic4 {
+        grid-area: 2 / 3 / 3 / 4;
+    }
+    &__pic5 {
+        grid-area: 2 / 4 / 3 / 5;
+    }
+    &__pic2,
+    &__pic3,
+    &__pic4,
+    &__pic5 {
+        overflow: hidden;
+        background-color: #fff;
+        @include tr();
+        &:hover,
+        &:active,
+        &:focus {
+            opacity: .3;
+        }
+    }
+}
+
+// STYLE FOR 5 BLOCK - MAP
+.map {
+    height: 755px;
+    width: 100%;
+    background-color: grey;
+    h5 {
+        display: none;
+    }
+}
+
+// STYLE FOR 6 BLOCK - FOOTER AND FORM
+.footer {
+    font-family: 'GothamBook';
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(45deg, rgba(85, 183, 255, .9), rgba(128, 96, 254, .9)), url(../../img/background/bg-footer.png) no-repeat top right;
+    background-size: contain;
+    color: #fff;
+    padding: 200px 0 200px 0;
+    &__content {
+        width: 770px;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    &__nav {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        .nav {
+            &__links-soc {
+                display: flex;
+                justify-content: space-between;
+                width: 20%;
+            }
+        }
+    }
+}
+
+.form {
+    position: absolute;
+    left: 50%;
+    bottom: 75%;
+    transform: translate(-50%);
+    z-index: 10;
+    background: linear-gradient(rgba(247, 245, 255, .95)), url(../../img/background/bg-form.jpg) no-repeat bottom;
+    background-size: 150% 100%;
+    width: 800px;
+    padding: 60px 60px 40px 60px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    color: $text-color;
+    // border: 1px solid #000;
+    box-shadow: 0px 0px 28px 5px rgba(0, 0, 0, 0.75);
+    font-size: 1.5rem;
+    & i {
+        color: #7e5aff
+    }
+    &__data {
+        display: flex;
+    }
+    &__our-data {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__data-user {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        padding-left: 40px;
+    }
+    &__btn {
+        font-family: 'GothamBook';
+        text-transform: uppercase;
+        display: inline-block;
+        width: 140px;
+        font-size: 1.4rem;
+        align-self: flex-end;
+        padding: 15px 5px 15px 5px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, .99);
+        cursor: pointer;
+        border: 1px solid $text-color;
+        @include tr();
+        &:hover,
+        &:active,
+        &:focus {
+            transform: scale(1.1);
+            transition: .4s;
+        }
+    }
+    &__item {
+        margin-bottom: 30px;
+        font-style: normal;
+        text-decoration: none;
+        color: $text-color;
+        @include tr();
+        &--email,
+        &--tel,
+        &--addr {
+            &:hover,
+            &:focus,
+            &:active {
+                color: $link-color;
+            }
+        }
+    }
+    &__icon {
+        color: $link-color;
+        margin-right: 10px;
+    }
+    &__name,
+    &__email {
+        background-color: transparent;
+        font-size: 1.8rem;
+        line-height: 1.8;
+        font-family: 'GothamBook';
+        outline: none;
+        width: 100%;
+        padding: 0 0 10px 0;
+        margin-bottom: 35px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        color: $text-color;
+        &::placeholder {
+            text-indent: 0px;
+            transition: text-indent 1000ms;
+            color: #4b5562;
+        }
+        &:active::placeholder,
+        &:focus::placeholder {
+            text-indent: 1000px;
+        }
+        &:active,
+        &:focus {
+            border-bottom: 1px solid $text-light-color;
+        }
+    }
+    &__email {
+        margin-bottom: 30px;
+    }
+}
+
+// IMPORT MEDIA 
+@import '../media/media.scss';
