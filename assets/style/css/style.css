@@ -1227,4 +1227,219 @@ header {
     margin-top: 4rem;
   }
 }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .nav__logo-wrap {
+    width: 100%;
+  }
+  .nav__links {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .nav__links-soc {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .header__title {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+  .main__trade-left {
+    display: none;
+  }
+  .main__trade-right {
+    margin-left: 8%;
+    top: 0;
+  }
+  .main__commerce-left {
+    display: none;
+  }
+  .main__commerce-right {
+    position: static;
+    margin: 6% 0 0 2%;
+  }
+  .form {
+    width: 100%;
+    padding: 3rem;
+  }
+  .footer {
+    padding: 125px 0;
+  }
+  .footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__nav a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer .nav__links-soc {
+    width: 100%;
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .nav__logo-wrap {
+    width: 100%;
+  }
+  .nav__links {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .nav__links-soc {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .header__title {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+  .main__trade {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  .main__trade-left img {
+    position: static;
+    opacity: 1;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .main__trade-right {
+    top: 0;
+  }
+  .main__commerce {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  .main__commerce-left {
+    width: 529px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background: none;
+  }
+  .main__commerce-left img {
+    width: 100%;
+    position: static;
+    opacity: 1;
+  }
+  .main__commerce-right {
+    position: static;
+    max-width: 535px;
+  }
+  .form {
+    width: 100%;
+    padding: 3rem;
+  }
+  .footer {
+    padding: 125px 0;
+  }
+  .footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__nav a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer .nav__links-soc {
+    width: 100%;
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1431.98px) {
+  .main__trade {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .main__trade-left {
+    width: 100%;
+    background: none;
+  }
+  .main__commerce {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .main__commerce-left {
+    width: 100%;
+    background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 2100px) {
+  .scroll {
+    top: 80%;
+  }
+}
+
+@media (min-width: 2101px) {
+  .scroll {
+    top: 69%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

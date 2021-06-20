@@ -3,7 +3,7 @@
 const screenWidth = window.screen.width;
 const screenHeight = window.screen.height;
 
-if (screenWidth < 565) {
+if (screenWidth <= 768) {
     $(document).ready(function() {
         $('.slider-one').slick({
             dots: true,
@@ -23,6 +23,30 @@ if (screenWidth < 565) {
         $('.slider-two').slick({
             dots: true,
             slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 4000
+        });
+    });
+} else if (screenWidth >= 769 && screenWidth <= 900) {
+    $(document).ready(function() {
+        $('.slider-one').slick({
+            dots: true,
+            adaptiveHeight: true,
+            arrows: false,
+            autoplay: true,
+            draggable: true,
+            verticalSwiping: true,
+            swipeToSlide: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            autoplaySpeed: 6000,
+            cssEase: 'linear',
+            focusOnSelect: true
+        });
+        $('.slider-two').slick({
+            dots: true,
+            slidesToShow: 2,
             autoplay: true,
             autoplaySpeed: 4000
         });
